@@ -36,7 +36,7 @@ jobs:
           client-secret: ${{ secrets.CLIENT_SECRET }}
           tenant-id: ${{ secrets.TENANT_ID }}
           solution-name: ${{ secrets.SOLUTION_NAME }}
-          solution-output-file: ${{ secrets.SOLUTION_NAME }.zip
+          solution-output-file: ${{ secrets.SOLUTION_NAME }}.zip
           managed: false
 
       - name: Commit exported solution
