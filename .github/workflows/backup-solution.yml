@@ -38,12 +38,19 @@ jobs:
           solution-name: ${{ secrets.SOLUTION_NAME }}
           solution-output-file: ${{ secrets.SOLUTION_NAME }}.zip
           managed: false
+          
+      - name: Unpack-Solution-Action
+        uses: microsoft/powerplatform-actions/unpack-solution@v1
+        with:
+          solution-file: ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
+          solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}
+          solution-type: 'Unmanaged'
+          overwrite-files: true
 
-      - name: Commit exported solution
-        run: |
-          git config user.name "pogorman"
-          git config user.email "pogorman@microsoft.com"
-          git add ${{ secrets.SOLUTION_NAME }}.zip
-          git commit -m "Backup of ${{ secrets.SOLUTION_NAME }} on $(date)"
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} HEAD:main
-        continue-on-error: true
+      - name: branch-solution, prepare it for a PullRequest
+        uses: microsoft/powerplatform-actions/branch-solution@v1
+        with:
+          solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}
+          solution-target-folder: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          allow-empty-commit: true
