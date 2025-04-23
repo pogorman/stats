@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{695b4d9c-7da9-41f4-8fe6-e39c73921836}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="ogdw_name" select="1" icon="1" preview="1">
+        <row name="result" id="ogdw_vehicleid">
+          <cell name="ogdw_name" width="300" />
+          <cell name="ogdw_manufacturer" width="188" />
+          <cell name="ogdw_make" width="100" />
+          <cell name="ogdw_model" width="100" />
+          <cell name="ogdw_enginetype" width="111" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="ogdw_vehicle">
+          <attribute name="ogdw_vehicleid" />
+          <attribute name="ogdw_name" />
+          <attribute name="createdon" />
+          <order attribute="ogdw_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="ogdw_make" />
+          <attribute name="ogdw_model" />
+          <attribute name="ogdw_enginetype" />
+          <attribute name="ogdw_manufacturer" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Vehicles" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

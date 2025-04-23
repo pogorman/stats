@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{0db7a422-31ca-417c-94f4-30576aa3e3bd}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{40c5c755-eb37-4461-875e-a94a7c85ec16}" IsUserDefined="1">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{a4fce354-1077-410a-8561-c03a790bbc49}">
+                  <labels>
+                    <label description="GENERAL" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3fce93e2-7c89-4c91-9205-449b1f5d339e}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ogdw_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{152a7861-3080-46a7-a1eb-7ffe490f9fca}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Manufacturer" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_manufacturer" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ogdw_manufacturer" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7a511d48-2e76-436c-a193-22ab681ec324}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Make" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_make" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ogdw_make" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{381b4349-fa23-4c3b-bd10-a0c8f73a1081}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Model" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_model" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ogdw_model" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d288b6b7-f562-41c5-99e3-82592443aa0f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Engine Type" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_enginetype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="ogdw_enginetype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d9e9889c-7dbb-4f0b-9667-8eec73907a71}" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>
