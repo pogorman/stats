@@ -1,0 +1,54 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      - name: Install Power Platform CLI
+        run: |
+          npm install -g pac
+
+      - name: Authenticate with Power Platform
+        run: |
+          pac auth create --kind SERVICEPRINCIPAL \
+            --url ${{ secrets.ENVIRONMENT_URL }} \
+            --tenant ${{ secrets.TENANT_ID }} \
+            --clientId ${{ secrets.CLIENT_ID }} \
+            --clientSecret ${{ secrets.CLIENT_SECRET }}
+
+      - name: Export Solution
+        run: |
+          mkdir solution
+          pac solution export --name ${{ secrets.SOLUTION_NAME }} \
+            --path ./solution \
+            --managed false
+
+      - name: Commit and Push to GitHub
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add solution
+          git commit -m "Backup: ${{ secrets.SOLUTION_NAME }} on $(date)"
+          git push
+        continue-on-error: true
