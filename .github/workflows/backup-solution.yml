@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add exported-solution
+          git add ${{ secrets.SOLUTION_NAME }}.zip
           git commit -m "Backup of ${{ secrets.SOLUTION_NAME }} on $(date)"
           git push
         continue-on-error: true
