@@ -25,9 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Install Power Platform CLI
+      - name: Download Power Platform CLI
         run: |
-          npm install -g pac
+          curl -L -o pac.zip https://aka.ms/PowerAppsCLI
+          unzip pac.zip -d paccli
+          echo "$GITHUB_WORKSPACE/paccli" >> $GITHUB_PATH
 
       - name: Authenticate with Power Platform
         run: |
