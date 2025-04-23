@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a6d4e2bd-5395-47fc-9817-18d9d12345ba}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{442ef084-49f8-4aeb-b22e-d91f44db9392}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{7da16fbc-b15d-4764-bf45-03d50028a045}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{44f38551-91b9-42a3-b45f-d66315039dc2}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="ogdw_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2881f69b-ca3e-4f19-874d-75c50b5a2905}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Manufacturer" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_manufacturer" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ogdw_manufacturer" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2be7df9b-e03c-44a2-bb46-361f2033e012}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Make" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_make" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ogdw_make" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7eaec4fc-11c1-463d-bd1c-85067ae611d6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Model" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_model" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ogdw_model" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6912ab8f-04dd-4018-bc4c-30d26ad92bc8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Engine Type" languagecode="1033" />
+                        </labels>
+                        <control id="ogdw_enginetype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="ogdw_enginetype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{234b7c0c-0323-426c-960b-5b3da7037a1d}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{fa7c8f2f-48dc-4957-9eb9-d0a7b2379784}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{9635b45e-c211-4bdd-9c6e-5b7fe997f5a6}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1ce8b966-c936-4acf-9763-2465aad13142}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ec0fbf70-9f89-4116-9efc-eb659c1c2aee}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{2ec9f0fa-db4d-42a1-a022-5f637cdfc9d7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{646ce63f-40a3-49cf-bf12-f2a0021a90b9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{00ae8eee-a677-4541-9034-fe680f08dac8}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{233b3189-3d47-498a-8467-d9fffaa9411d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
