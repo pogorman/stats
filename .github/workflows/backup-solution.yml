@@ -36,21 +36,21 @@ jobs:
           client-secret: ${{ secrets.CLIENT_SECRET }}
           tenant-id: ${{ secrets.TENANT_ID }}
           solution-name: ${{ secrets.SOLUTION_NAME }}
-          solution-output-file: ${{ secrets.SOLUTION_NAME }}.zip
+          solution-output-file: out/export/${{ secrets.SOLUTION_NAME }}.zip
           managed: false
           
       - name: Unpack-Solution-Action
         uses: microsoft/powerplatform-actions/unpack-solution@v1
         with:
-          solution-file: ${{ secrets.SOLUTION_NAME }}.zip
-          solution-folder: ${{ secrets.SOLUTION_NAME }}
+          solution-file: out/export/${{ secrets.SOLUTION_NAME }}.zip
+          solution-folder: out/solutions/${{ secrets.SOLUTION_NAME }}
           solution-type: 'Unmanaged'
           overwrite-files: true
 
       - name: branch-solution, prepare it for a PullRequest
         uses: microsoft/powerplatform-actions/branch-solution@v1
         with:
-          solution-folder: ${{ secrets.SOLUTION_NAME }}
-          solution-target-folder: ${{ secrets.SOLUTION_NAME }}
+          solution-folder: out/solutions/${{ secrets.SOLUTION_NAME }}
+          solution-target-folder: solutions/${{ secrets.SOLUTION_NAME }}
           repo-token: ${{ secrets.PAT_TOKEN }}
           allow-empty-commit: true
