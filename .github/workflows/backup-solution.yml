@@ -22,35 +22,28 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Download Power Platform CLI
-        run: |
-          curl -L -o pac.zip https://aka.ms/PowerAppsCLI
-          unzip pac.zip -d paccli
-          echo "$GITHUB_WORKSPACE/paccli" >> $GITHUB_PATH
-
-      - name: Authenticate with Power Platform
-        run: |
-          pac auth create --kind SERVICEPRINCIPAL \
-            --url ${{ secrets.ENVIRONMENT_URL }} \
-            --tenant ${{ secrets.TENANT_ID }} \
-            --clientId ${{ secrets.CLIENT_ID }} \
-            --clientSecret ${{ secrets.CLIENT_SECRET }}
+      - name: Power Platform Tool Installer
+        uses: microsoft/powerplatform-actions/actions-install@v1
 
       - name: Export Solution
-        run: |
-          mkdir solution
-          pac solution export --name ${{ secrets.SOLUTION_NAME }} \
-            --path ./solution \
-            --managed false
+        uses: microsoft/powerplatform-actions/export-solution@v1
+        with:
+          environment-url: ${{ secrets.ENVIRONMENT_URL }}
+          app-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          solution-name: ${{ secrets.SOLUTION_NAME }}
+          managed: false
+          output-folder: exported-solution
 
-      - name: Commit and Push to GitHub
+      - name: Commit exported solution
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add solution
-          git commit -m "Backup: ${{ secrets.SOLUTION_NAME }} on $(date)"
+          git add exported-solution
+          git commit -m "Backup of ${{ secrets.SOLUTION_NAME }} on $(date)"
           git push
         continue-on-error: true
