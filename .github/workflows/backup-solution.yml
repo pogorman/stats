@@ -37,7 +37,6 @@ jobs:
           tenant-id: ${{ secrets.TENANT_ID }}
           solution-name: ${{ secrets.SOLUTION_NAME }}
           managed: false
-          output-folder: exported-solution
 
       - name: Commit exported solution
         run: |
