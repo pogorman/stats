@@ -78,6 +78,7 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="1" schemaName="ogdw_accident" behavior="0" />
       <RootComponent type="1" schemaName="ogdw_maintenance" behavior="0" />
       <RootComponent type="1" schemaName="ogdw_route" behavior="0" />
       <RootComponent type="1" schemaName="ogdw_serviceoffering" behavior="0" />
