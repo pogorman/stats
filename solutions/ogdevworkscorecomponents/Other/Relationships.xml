@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_ogdw_accident" />
   <EntityRelationship Name="business_unit_ogdw_maintenance" />
   <EntityRelationship Name="business_unit_ogdw_route" />
   <EntityRelationship Name="business_unit_ogdw_serviceoffering" />
   <EntityRelationship Name="business_unit_ogdw_trip" />
   <EntityRelationship Name="business_unit_ogdw_vehicle" />
   <EntityRelationship Name="business_unit_ogdw_vehiclemanufacturers" />
+  <EntityRelationship Name="lk_ogdw_accident_createdby" />
+  <EntityRelationship Name="lk_ogdw_accident_modifiedby" />
   <EntityRelationship Name="lk_ogdw_maintenance_createdby" />
   <EntityRelationship Name="lk_ogdw_maintenance_modifiedby" />
   <EntityRelationship Name="lk_ogdw_route_createdby" />
@@ -21,18 +24,21 @@
   <EntityRelationship Name="ogdw_route_Trip_ogdw_trip" />
   <EntityRelationship Name="ogdw_trip_Vehicle_ogdw_vehicle" />
   <EntityRelationship Name="ogdw_vehicle_Manufacturer_ogdw_vehiclemanufact" />
+  <EntityRelationship Name="owner_ogdw_accident" />
   <EntityRelationship Name="owner_ogdw_maintenance" />
   <EntityRelationship Name="owner_ogdw_route" />
   <EntityRelationship Name="owner_ogdw_serviceoffering" />
   <EntityRelationship Name="owner_ogdw_trip" />
   <EntityRelationship Name="owner_ogdw_vehicle" />
   <EntityRelationship Name="owner_ogdw_vehiclemanufacturers" />
+  <EntityRelationship Name="team_ogdw_accident" />
   <EntityRelationship Name="team_ogdw_maintenance" />
   <EntityRelationship Name="team_ogdw_route" />
   <EntityRelationship Name="team_ogdw_serviceoffering" />
   <EntityRelationship Name="team_ogdw_trip" />
   <EntityRelationship Name="team_ogdw_vehicle" />
   <EntityRelationship Name="team_ogdw_vehiclemanufacturers" />
+  <EntityRelationship Name="user_ogdw_accident" />
   <EntityRelationship Name="user_ogdw_maintenance" />
   <EntityRelationship Name="user_ogdw_route" />
   <EntityRelationship Name="user_ogdw_serviceoffering" />
