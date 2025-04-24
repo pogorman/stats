@@ -6,7 +6,7 @@
       <LocalizedName description="ogdw-core-components" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.11</Version>
+    <Version>1.0.0.15</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>ogdevworks</UniqueName>
@@ -80,6 +80,7 @@
     <RootComponents>
       <RootComponent type="1" schemaName="ogdw_maintenance" behavior="0" />
       <RootComponent type="1" schemaName="ogdw_route" behavior="0" />
+      <RootComponent type="1" schemaName="ogdw_serviceoffering" behavior="0" />
       <RootComponent type="1" schemaName="ogdw_trip" behavior="0" />
       <RootComponent type="1" schemaName="ogdw_vehicle" behavior="0" />
       <RootComponent type="1" schemaName="ogdw_vehiclemanufacturers" behavior="0" />
